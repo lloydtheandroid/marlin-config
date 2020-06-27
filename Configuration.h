@@ -384,10 +384,20 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+// 27-June-2020 Lloyd Results from last PID Autotune
+// Recv: PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+// Recv: #define DEFAULT_Kp 25.65
+// Recv: #define DEFAULT_Ki 1.56
+// Recv: #define DEFAULT_Kd 105.60
+
   // Ultimaker
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  // #define DEFAULT_Kp 22.2
+  // #define DEFAULT_Ki 1.08
+  // #define DEFAULT_Kd 114
+  // 27-June-2020 Lloyd Update PID defaults
+  #define DEFAULT_Kp 25.65
+  #define DEFAULT_Ki 1.56
+  #define DEFAULT_Kd 105.60
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -1994,6 +2004,9 @@
 // 300ms is a good value but you can try less delay.
 // If the servo can't reach the requested position, increase it.
 #define SERVO_DELAY { 300 }
+
+//26-Jun-20 Lloyd modified for MakerSelect
+#define SERVO0_PIN 27
 
 // Only power servos during movement, otherwise leave off to prevent jitter
 //#define DEACTIVATE_SERVOS_AFTER_MOVE
