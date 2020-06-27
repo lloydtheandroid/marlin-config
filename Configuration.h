@@ -824,14 +824,14 @@
  *    (0,0)
  */
 // 27-June-2020 Lloyd Modified for BLTOUCH MakerSelect
-#define X_PROBE_OFFSET_FROM_EXTRUDER -22  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER -50  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -3   // Z offset: -below +above  [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER -32  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -64  // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 // #define MIN_PROBE_EDGE 10
 // 26-June-2020 Lloyd Modified for BLTOUCH MakerSelect
-#define MIN_PROBE_EDGE -22  //Must be greaterthan or equal to X_PROBE_OFFSET_FROM_EXTRUDER
+#define MIN_PROBE_EDGE -25  //Must be greaterthan or equal to X_PROBE_OFFSET_FROM_EXTRUDER
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -1102,6 +1102,12 @@
   //#define FRONT_PROBE_BED_POSITION MIN_PROBE_EDGE
   //#define BACK_PROBE_BED_POSITION (Y_BED_SIZE - MIN_PROBE_EDGE)
 
+  #define LEFT_PROBE_BED_POSITION -22
+  #define RIGHT_PROBE_BED_POSITION 178
+  #define FRONT_PROBE_BED_POSITION -50
+  #define BACK_PROBE_BED_POSITION 150
+
+
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
 
@@ -1215,7 +1221,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
@@ -1501,7 +1507,8 @@
  * you must uncomment the following option or it won't work.
  *
  */
-// 27-June-2020 Removed to save memory
+//#define SDSUPPORT
+// 24-June-2020 Lloyd Uncommented for MakerSelect
 //#define SDSUPPORT
 
 /**
@@ -2011,4 +2018,4 @@
 // Only power servos during movement, otherwise leave off to prevent jitter
 //#define DEACTIVATE_SERVOS_AFTER_MOVE
 
-#endif // CONFIGURATION_H
+#endif // CONFIGURATION_H 
