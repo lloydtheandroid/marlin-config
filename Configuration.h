@@ -143,7 +143,7 @@
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
-#define MACHINE_UUID "c5a3aefa-5cb4-4ea2-a415-0db6e6f55f79"
+//#define MACHINE_UUID "c5a3aefa-5cb4-4ea2-a415-0db6e6f55f79"
 
 // @section extruder
 
@@ -824,14 +824,14 @@
  *    (0,0)
  */
 // 27-June-2020 Lloyd Modified for BLTOUCH MakerSelect
-#define X_PROBE_OFFSET_FROM_EXTRUDER -20  // X offset: -left  +right  [of the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER -22  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER -50  // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER -3   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 // #define MIN_PROBE_EDGE 10
 // 26-June-2020 Lloyd Modified for BLTOUCH MakerSelect
-#define MIN_PROBE_EDGE -20  //Must be greaterthan or equal to X_PROBE_OFFSET_FROM_EXTRUDER
+#define MIN_PROBE_EDGE -22  //Must be greaterthan or equal to X_PROBE_OFFSET_FROM_EXTRUDER
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -1501,9 +1501,8 @@
  * you must uncomment the following option or it won't work.
  *
  */
+// 27-June-2020 Removed to save memory
 //#define SDSUPPORT
-// 24-June-2020 Lloyd Uncommented for MakerSelect
-#define SDSUPPORT
 
 /**
  * SD CARD: SPI SPEED
