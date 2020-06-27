@@ -1,4 +1,4 @@
-/**
+/** Lloyd's configuration for Maker Select v2 with Melzi board and BLTOUCH
  * Marlin 3D Printer Firmware
  * Copyright (C) 2016 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
