@@ -784,7 +784,7 @@
  * readings with inductive probes and piezo sensors.
  */
 // 26-June-2020 Lloyd Modified for BLTOUCH MakerSelect (OPTIONAL)
-#define PROBING_HEATERS_OFF       // Turn heaters off when probing
+//#define PROBING_HEATERS_OFF       // Turn heaters off when probing
 #if ENABLED(PROBING_HEATERS_OFF)
   //#define WAIT_FOR_BED_HEATER     // Wait for bed to heat back up between probes (to improve accuracy)
 #endif
@@ -824,8 +824,8 @@
  *    (0,0)
  */
 // 27-June-2020 Lloyd Modified for BLTOUCH MakerSelect
-#define X_PROBE_OFFSET_FROM_EXTRUDER -32  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER -64  // Y offset: -front +behind [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER -22  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -50  // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
@@ -1102,10 +1102,10 @@
   //#define FRONT_PROBE_BED_POSITION MIN_PROBE_EDGE
   //#define BACK_PROBE_BED_POSITION (Y_BED_SIZE - MIN_PROBE_EDGE)
 
-  #define LEFT_PROBE_BED_POSITION -22
-  #define RIGHT_PROBE_BED_POSITION 178
-  #define FRONT_PROBE_BED_POSITION -50
-  #define BACK_PROBE_BED_POSITION 150
+  #define LEFT_PROBE_BED_POSITION 10
+  #define RIGHT_PROBE_BED_POSITION 150
+  #define FRONT_PROBE_BED_POSITION 10
+  #define BACK_PROBE_BED_POSITION 130
 
 
   // Probe along the Y axis, advancing X after each column
@@ -2018,4 +2018,4 @@
 // Only power servos during movement, otherwise leave off to prevent jitter
 //#define DEACTIVATE_SERVOS_AFTER_MOVE
 
-#endif // CONFIGURATION_H 
+#endif // CONFIGURATION_H
